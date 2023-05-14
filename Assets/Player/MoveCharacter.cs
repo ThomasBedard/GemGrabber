@@ -29,28 +29,48 @@ public class MoveCharacter : MonoBehaviour
         float val_x = Input.GetAxis("Horizontal");
         float val_y = Input.GetAxis("Vertical");
 
-        //if val_x is less than 0, then set direction to 3
-        if (val_x < 0)
-        {
-            animator.SetInteger("direction", (int)MoveDirection.LEFT);
-        }
-        //if val_x is more than 0, then set direction to 4
-        if (val_x > 0)
-        {
-            animator.SetInteger("direction", (int)MoveDirection.RIGHT);
-        }
-        //if val_y is less than 0, then set direction to 2
-        if (val_y < 0)
-        {
-            animator.SetInteger("direction", (int)MoveDirection.DOWN);
-        }
-        //if val_y is more than 0, then set direction to 1
-        if (val_y > 0)
-        {
-            animator.SetInteger("direction", (int)MoveDirection.UP);
-        }
+        ////if val_x is less than 0, then set direction to 3
+        //if (val_x < 0f)
+        //{
+        //    animator.SetInteger("direction", (int)MoveDirection.LEFT);
+        //}
+        ////if val_x is more than 0, then set direction to 4
+        //if (val_x > 0f)
+        //{
+        //    animator.SetInteger("direction", (int)MoveDirection.RIGHT);
+        //}
+        ////if val_y is less than 0, then set direction to 2
+        //if (val_y < 0f)
+        //{
+        //    animator.SetInteger("direction", (int)MoveDirection.DOWN);
+        //}
+        ////if val_y is more than 0, then set direction to 1
+        //if (val_y > 0f)
+        //{
+        //    animator.SetInteger("direction", (int)MoveDirection.UP);
+        //}
         //do for all dorection
         //then move the guy just like you didfor animation 1.
+        if (Input.GetKey(KeyCode.W))
+        {
+            animator.SetInteger("direction", (int)MoveDirection.UP);
+
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            animator.SetInteger("direction", (int)MoveDirection.LEFT);
+
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            animator.SetInteger("direction", (int)MoveDirection.DOWN);
+
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            animator.SetInteger("direction", (int)MoveDirection.RIGHT);
+
+        }
 
         transform.position += new Vector3(val_x, val_y, 0).normalized *speed * Time.deltaTime;
 
