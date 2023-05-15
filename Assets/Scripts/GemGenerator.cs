@@ -56,20 +56,31 @@ public class GemGenerator : MonoBehaviour
                         if(height == 0) { 
                         position = new Vector2(Random.Range(15, 29), Random.Range(6, 12));
                         //6 to 12
-                    }
-                    else
-                    {
+                        }
+                        else
+                        {
                         position = new Vector2(Random.Range(15, 29), Random.Range(-6, -12));
                         //-6 to -12
+                        }
                     }
-                    
-                    }
+
                     else
                     {
+                        int height = Random.Range(0, 2);
+                        if (height == 0)
+                        {
+                            position = new Vector2(Random.Range(15, -27), Random.Range(6, 12));
+                            //6 to 12
+                        }
+                        else
+                        {
+                            position = new Vector2(Random.Range(15, 27), Random.Range(-6, -12));
+                            //-6 to -12
+                        }
                         //left side
-                        position = new Vector2(Random.Range(15, -27), Random.Range(13, -13));
-                    }
-                i++;
+                        //position = new Vector2(Random.Range(15, -27), Random.Range(13, -13));
+                            }
+                        i++;
                 //}
             //}
             //else
