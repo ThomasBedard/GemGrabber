@@ -46,7 +46,7 @@ public class GemGenerator : MonoBehaviour
 
               //  position = new Vector2(Random.Range(-16, 27), Random.Range(-11, 9));
 
-                if(position.x <= camera.transform.position.x && position.y <= camera.transform.position.y)
+                if(position.x <= camera.transform.position.x + 2 && position.y <= camera.transform.position.y + 2)
                 {
                     int sid = Random.Range(0, 2);
                     if (sid == 0)
