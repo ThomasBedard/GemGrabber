@@ -26,18 +26,18 @@ public class GemGenerator : MonoBehaviour
         
         Vector2 position;
 
-        //position = new Vector2(Random.Range(-16,20),Random.Range(-11,9));
-        int side = Random.Range(0, 2);
-        if (side == 0)
-        {
+        position = new Vector2(Random.Range(-16,20),Random.Range(-11,9));
+        //int side = Random.Range(0, 2);
+        //if (side == 0)
+        //{
             //right side
-            position = new Vector2(Random.Range(13, 29), Random.Range(14, -14));
-        }
-        else
-        {
+          //  position = new Vector2(Random.Range(13, 29), Random.Range(14, -14));
+        //}
+        //else
+        //{
             //left side
-            position = new Vector2(Random.Range(15, -27), Random.Range(14, -14));
-        }
+          //  position = new Vector2(Random.Range(15, -27), Random.Range(14, -14));
+        //}
 
         for (int i = 0; i < 1; i++)
         {
