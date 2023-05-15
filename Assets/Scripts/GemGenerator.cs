@@ -52,12 +52,12 @@ public class GemGenerator : MonoBehaviour
                     if (sid == 0)
                     {
                         //right side
-                        position = new Vector2(Random.Range(13, 29), Random.Range(14, -13));
+                        position = new Vector2(Random.Range(13, 29), Random.Range(13, -13));
                     }
                     else
                     {
                         //left side
-                        position = new Vector2(Random.Range(15, -27), Random.Range(14, -13));
+                        position = new Vector2(Random.Range(15, -27), Random.Range(13, -13));
                     }
                 i++;
                 //}
