@@ -32,6 +32,7 @@ public class BulletController : MonoBehaviour
         // If the bullet collides with an enemy, raise the OnBulletDestroyed event
         if (other.CompareTag("Enemy"))
         {
+            //Destroy(other);
             Destroy(other.gameObject);
             Destroy(gameObject);
             // Call the OnBulletDestroyed event
