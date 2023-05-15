@@ -44,6 +44,7 @@ public class EnnemyFollowPlayer : MonoBehaviour
     {
         if (player)
         {
+           // rb2d.velocity = move * speed;
             rb2d.velocity = new Vector2(move.x, move.y) * speed;
         }
     }

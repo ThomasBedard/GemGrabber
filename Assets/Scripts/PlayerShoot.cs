@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerShoot : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class PlayerShoot : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && currentBullets < maxBullets)
+        if (Input.GetMouseButtonDown(0) /*&& currentBullets < maxBullets*/)
         {
             FireBullet();
         }
@@ -23,6 +24,7 @@ public class PlayerShoot : MonoBehaviour
 
     void FireBullet()
     {
+        //Vector2 position = new Vector2(10, 10); 
         // Instantiate the bullet object
         GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
 
@@ -34,7 +36,7 @@ public class PlayerShoot : MonoBehaviour
 
         // Ignore collisions with the character's layer
         int characterLayer = LayerMask.NameToLayer("Character");
-        Physics2D.IgnoreLayerCollision(gameObject.layer, characterLayer, true);
+        //Physics2D.IgnoreLayerCollision(gameObject.layer, characterLayer, true);
 
         // Increment the bullet count and add an event listener to the bullet's OnBulletDestroyed event
         currentBullets++;
@@ -47,7 +49,7 @@ public class PlayerShoot : MonoBehaviour
     IEnumerator ResetLayerCollisionIgnore(int layer)
     {
         yield return new WaitForSeconds(0.1f);
-        Physics2D.IgnoreLayerCollision(gameObject.layer, layer, false);
+        //Physics2D.IgnoreLayerCollision(gameObject.layer, layer, false);
     }
 
     void OnBulletDestroyed()

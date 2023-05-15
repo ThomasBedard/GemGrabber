@@ -20519,8 +20519,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gem: {fileID: 1686839248}
-  player: {fileID: 0}
-  camera: {fileID: 0}
+  player: {fileID: 1916293855}
+  camera: {fileID: 1638897884}
 --- !u!1 &1329512337
 GameObject:
   m_ObjectHideFlags: 0
@@ -20545,13 +20545,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345192231}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.36395314, y: 0.3951923, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1916293856}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1329512339
 MonoBehaviour:
@@ -20580,6 +20580,8 @@ GameObject:
   - component: {fileID: 1345192235}
   - component: {fileID: 1345192234}
   - component: {fileID: 1345192233}
+  - component: {fileID: 1345192238}
+  - component: {fileID: 1345192237}
   m_Layer: 0
   m_Name: BulletHolder
   m_TagString: Untagged
@@ -20599,7 +20601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff53a271722e0364fbd120ee66e564e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1345192236}
+  player: {fileID: 1916293856}
   speed: 2
 --- !u!95 &1345192234
 Animator:
@@ -20686,8 +20688,45 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1916293856}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1345192237
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345192231}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.25
+--- !u!50 &1345192238
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345192231}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1638897884
 GameObject:
   m_ObjectHideFlags: 0
@@ -21169,6 +21208,7 @@ Transform:
   m_LocalScale: {x: 2.7476065, y: 2.5304136, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1329512338}
   - {fileID: 1345192236}
   m_Father: {fileID: 0}
   m_RootOrder: 1
